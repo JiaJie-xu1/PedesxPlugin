@@ -53,6 +53,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
     //PedesxSdk Start
-    implementation 'com.moku.android:pedesxSdk:1.0.3'
+    implementation 'com.moku.android:pedesxSdk:1.0.4'
     //PedesxSdk end
 }
