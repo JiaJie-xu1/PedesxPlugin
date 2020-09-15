@@ -75,7 +75,9 @@ public class PedesxpluginPlugin : FlutterPlugin, MethodCallHandler, ActivityAwar
             val shelf_id: String? = call.argument("shelf_id")
             val csj_appId: String? = call.argument("csj_appId")
             val csj_video_id: String? = call.argument("csj_video_id")
-            PedesxUtil.init(applicationContext, appId, shelf_id, csj_appId, csj_video_id)
+            val ylh_appId: String? = call.argument("ylh_appId")
+            val ylh_video_id: String? = call.argument("ylh_video_id")
+            PedesxUtil.init(applicationContext, appId, shelf_id, csj_appId, csj_video_id, ylh_appId, ylh_video_id)
         } else if (call.method == "registerPedesxUser") {
             val uid: String? = call.argument("uid")
             val oaid: String? = call.argument("oaid")

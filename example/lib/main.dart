@@ -62,13 +62,17 @@ class _MyAppState extends State<MyApp> {
      *  shelf_id:任务的货架ID
      *  csjAppId：穿山甲后台的AppID
      *  codeId：穿山甲后台申请的激励视频广告位ID
+     *  ylh_appId:优量汇后台申请的appID
+     *  ylh_video_id:优量汇后台申请的激励视频广告位ID
      */
 
     await Pedesxplugin.initPedesxSdk(
         appId: "21",
         shelf_id: "f4b005970b3640f4b9e85bddb14d274a",
         csj_appId: "5056758",
-        csj_video_id: "945122969"
+        csj_video_id: "945122969",
+        ylh_appId:"",
+        ylh_video_id:""
     );
   }
   @override

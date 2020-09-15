@@ -54,11 +54,11 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation project(path: ':open_ad_sdk')
+    implementation project(path: ':open_ad_sdk_3.2.0.6')
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
     //PedesxSdk Start
-    implementation 'com.moku.android:pedesxSdk:1.0.6'
+    implementation 'com.moku.android:pedesxSdk:1.0.8'
     //PedesxSdk end
 }
