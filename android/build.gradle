@@ -58,7 +58,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
+    implementation project(path: ':GDTSDK.unionNoPlugin.4.270.1140')
+    implementation project(path: ':tbs_sdk_thirdapp_v4.3.0.39_43939')
     //PedesxSdk Start
-    implementation 'com.moku.android:pedesxSdk:1.0.8'
+    implementation 'com.moku.android:pedesxSdk:1.0.11'
     //PedesxSdk end
 }

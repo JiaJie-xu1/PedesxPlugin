@@ -1,14 +1,14 @@
 package com.example.pedesxplugin
 
 import android.app.Activity
-import android.app.Application
 import android.content.Context
 import android.util.Log
-import androidx.annotation.NonNull;
+import androidx.annotation.NonNull
 import com.adsmobile.pedesxsdk.ui.activity.LookVideoActivity
 import com.adsmobile.pedesxsdk.utils.ActivityUtils
 import com.adsmobile.pedesxsdk.utils.PedesxUtil
-
+import com.qq.e.ads.cfg.MultiProcessFlag
+import com.qq.e.comm.managers.GDTADManager
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
@@ -67,7 +67,7 @@ public class PedesxpluginPlugin : FlutterPlugin, MethodCallHandler, ActivityAwar
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         Log.e("PedesxPlugin", "call method:" + call.method)
-
+        MultiProcessFlag.setMultiProcess(true);
         if (call.method == "getPlatformVersion") {
             result.success("Android ${android.os.Build.VERSION.RELEASE}")
         } else if (call.method == "registerPedesx") {
@@ -77,6 +77,9 @@ public class PedesxpluginPlugin : FlutterPlugin, MethodCallHandler, ActivityAwar
             val csj_video_id: String? = call.argument("csj_video_id")
             val ylh_appId: String? = call.argument("ylh_appId")
             val ylh_video_id: String? = call.argument("ylh_video_id")
+
+            Log.e("PedesxPlugin", "ylh_appId:$ylh_appId")
+            Log.e("PedesxPlugin", "ylh_video_id:$ylh_video_id")
             PedesxUtil.init(applicationContext, appId, shelf_id, csj_appId, csj_video_id, ylh_appId, ylh_video_id)
         } else if (call.method == "registerPedesxUser") {
             val uid: String? = call.argument("uid")
